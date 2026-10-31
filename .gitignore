@@ -1,0 +1,6 @@
+# Folders used to build deb file
+build/
+usr/
+
+# IDE files
+.idea/

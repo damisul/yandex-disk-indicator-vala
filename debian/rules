@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	TARGET=$(CURDIR)/usr ./prepare.sh
+	$(MAKE) BIN=$(CURDIR)/usr/bin/yandex-disk-indicator-vala
+
+override_dh_auto_test:
+	$(MAKE) test
+
+# Файлы пакета перечислены в debian/install, цели install в Makefile нет
+override_dh_auto_install:
+
+override_dh_auto_clean:
+	$(MAKE) clean
+	rm -rf usr

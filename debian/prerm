@@ -1,0 +1,14 @@
+#! /bin/bash -e
+#DEBHELPER#
+
+# Ярлык автозапуска индикатор создаёт сам в каталоге пользователя,
+# поэтому при удалении пакета он убирается отдельно.
+if [ "$1" = "remove" ]; then
+  userName=${SUDO_USER:-$USER}
+  userHome=$(eval echo "~${userName}")
+  if [ -n "$userHome" ] && [ -f "$userHome/.config/autostart/Yandex.Disk-indicator-vala.desktop" ]; then
+    rm "$userHome/.config/autostart/Yandex.Disk-indicator-vala.desktop"
+  fi
+fi
+
+exit 0

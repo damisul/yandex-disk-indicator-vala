@@ -1,0 +1,23 @@
+Source: yd-tools-vala
+Section: net
+Priority: optional
+Maintainer: Damir Sultanbekov <Damir.Sultanbekov@gmail.com>
+Build-Depends: debhelper-compat (= 13), valac, pkg-config, libglib2.0-dev, libgtk-3-dev, libayatana-appindicator3-dev
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+
+Package: yd-tools-vala
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, zenity, xclip
+Description: Yandex.Disk indicator for the desktop panel
+ The application indicator is displayed within the indicator plugin.
+ It uses the Yandex.Disk CLI synchronization utility and shows the current
+ status, disk sizes, last synchronized items and on-screen notifications when
+ the status changes.
+ .
+ Settings, user icons and the single-instance lock are kept in
+ ~/.config/yd-tools, so only one indicator is shown in the panel.
+ .
+ This project is a rewrite of yandex-disk-indicator by Sly_tom_cat
+ (https://github.com/slytomcat/yandex-disk-indicator), produced with the
+ assistance of a neural network.

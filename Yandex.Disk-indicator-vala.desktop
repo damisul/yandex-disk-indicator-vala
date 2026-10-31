@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Yandex.Disk indicator (Vala)
+Comment=Yandex.Disk indicator
+Categories=Network
+Exec=yandex-disk-indicator-vala
+Terminal=false
+Icon=/usr/share/yd-tools-vala/icons/yd-128.png
+GenericName=Yandex.Disk indicator
+Name[ru]=Индикатор Yandex.Disk (Vala)
+Name[el]=Ένδειξη λειτουργίας του Yandex.Disk (Vala)
+Name[bg]=Yandex.Disk индикатор (Vala)
+Name[be]=Індыкатар Яндекс.Дыск (Vala)
